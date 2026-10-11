@@ -1,9 +1,9 @@
 import logging
 
 import tensorflow.compat.v1 as tf
+from object_detection.builders.dataset_builder import build as build_dataset
 from object_detection.inputs import train_input
 from object_detection.protos import input_reader_pb2
-from object_detection.builders.dataset_builder import build as build_dataset
 from object_detection.utils.config_util import get_configs_from_pipeline_file
 
 

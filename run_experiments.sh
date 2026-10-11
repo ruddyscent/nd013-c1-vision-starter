@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 # Run from the repository root after generating all three configurations.
 set -euo pipefail
+run_root="${1:?Usage: bash run_experiments.sh RUN_ROOT}"
 for experiment in reference experiment0 experiment1; do
   for steps in 1000 2500; do
-    model_dir="experiments/${experiment}"
+    model_dir="${run_root}/${experiment}"
     python experiments/model_main_tf2.py \
       --model_dir="$model_dir" \
       --pipeline_config_path="$model_dir/pipeline_new.config" \

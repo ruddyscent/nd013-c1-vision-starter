@@ -24,8 +24,19 @@ def remap_classifier(value, target_shape):
     return selected.reshape(target_shape)
 
 
-def prepare(source, template, output):
+def prepare(source, template, output, checkpoint_output=None, report=None):
     """Copy matching tensors, remap two classifier tensors, verify restore."""
+    destination = Path(output)
+    if destination.exists():
+        raise FileExistsError(str(destination))
+    target_prefix = Path(
+        checkpoint_output or destination.parent / "initialization" / "ckpt"
+    )
+    if list(target_prefix.parent.glob(target_prefix.name + ".*")):
+        raise FileExistsError(str(target_prefix))
+    report_path = Path(report or destination.parent / "head_transfer.json")
+    if report_path.exists():
+        raise FileExistsError(str(report_path))
     tf.config.threading.set_intra_op_parallelism_threads(2)
     tf.config.threading.set_inter_op_parallelism_threads(2)
     config = pipeline_pb2.TrainEvalPipelineConfig()
@@ -44,9 +55,6 @@ def prepare(source, template, output):
     schedule.total_steps = 2500
     schedule.warmup_steps = 250
     config.train_config.num_steps = 2500
-    destination = Path(output)
-    if destination.exists():
-        raise FileExistsError(str(destination))
     model = model_builder.build(config.model, is_training=False)
     image, shapes = model.preprocess(tf.zeros([1, 640, 640, 3]))
     model.predict(image, shapes)
@@ -54,10 +62,7 @@ def prepare(source, template, output):
     _ = checkpoint.save_counter
     pretrained = tf.train.load_checkpoint(source)
     pretrained_shapes = pretrained.get_variable_to_shape_map()
-    target_prefix = Path("experiments/pretrained_model/waymo_head_transfer")
     target_prefix.parent.mkdir(parents=True, exist_ok=True)
-    if Path(str(target_prefix) + ".index").exists():
-        raise FileExistsError(str(target_prefix))
     copied, remapped = [], []
     with tempfile.TemporaryDirectory() as temporary:
         initial = checkpoint.write(str(Path(temporary) / "initial"))
@@ -119,8 +124,8 @@ def prepare(source, template, output):
         "Waymo vehicle and cyclist category definitions.",
         "exact_copy_verification": "passed",
     }
-    Path("artifacts").mkdir(exist_ok=True)
-    Path("artifacts/head_transfer.json").write_text(
+    report_path.parent.mkdir(parents=True, exist_ok=True)
+    report_path.write_text(
         json.dumps(report, indent=2)
     )
     print(json.dumps(report, indent=2))
@@ -130,9 +135,11 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--source", required=True)
     parser.add_argument(
-        "--template", default="experiments/experiment0/pipeline_new.config"
+        "--template", required=True
     )
     parser.add_argument(
-        "--output", default="experiments/experiment1/pipeline_new.config"
+        "--output", required=True
     )
+    parser.add_argument("--checkpoint-output")
+    parser.add_argument("--report")
     prepare(**vars(parser.parse_args()))

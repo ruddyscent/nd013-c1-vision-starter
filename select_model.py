@@ -5,11 +5,18 @@ import json
 from pathlib import Path
 
 
-def select(logdir):
+def select(logdir, output=None, report=None):
     import tensorflow as tf
+
     from export_metrics import read_scalars
 
     root = Path(logdir)
+    destination = Path(output) if output else root / "selected"
+    if destination.exists():
+        raise FileExistsError(str(destination))
+    report_path = Path(report) if report else root / "model_selection.json"
+    if report_path.exists():
+        raise FileExistsError(str(report_path))
     candidates = []
     for name in ("reference", "experiment0", "experiment1"):
         for row in read_scalars(root / name / "eval"):
@@ -36,8 +43,7 @@ def select(logdir):
     if not matching:
         raise ValueError("The best evaluated checkpoint was not retained")
     checkpoint = sorted(matching)[-1].resolve()
-    destination = root / "selected"
-    destination.mkdir(exist_ok=False)
+    destination.mkdir(parents=True, exist_ok=False)
     for source in checkpoint.parent.glob(checkpoint.name + ".*"):
         (destination / source.name).symlink_to(source)
     (destination / "checkpoint").write_text(
@@ -52,7 +58,8 @@ def select(logdir):
         candidates=candidates,
         criterion="Highest validation COCO mAP; test excluded",
     )
-    Path("artifacts/model_selection.json").write_text(
+    report_path.parent.mkdir(parents=True, exist_ok=True)
+    report_path.write_text(
         json.dumps(report, indent=2)
     )
     print(json.dumps(report, indent=2))
@@ -60,5 +67,7 @@ def select(logdir):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--logdir", default="experiments")
+    parser.add_argument("--logdir", required=True)
+    parser.add_argument("--output")
+    parser.add_argument("--report")
     select(**vars(parser.parse_args()))

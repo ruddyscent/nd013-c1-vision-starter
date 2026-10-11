@@ -1,11 +1,19 @@
-# Instructions
+# Legacy starter Docker setup
+
+This Dockerfile is retained from the starter and is not the environment used
+for the submitted results. It targets TensorFlow 2.5 / Python 3.8, while the
+verified Udacity runtime uses TensorFlow 2.3 / Python 3.7. It also installs the
+unpinned TensorFlow Models default branch, so it is not a reproducible lockfile.
+Use the Udacity reproduction procedure in the project README for this project.
+A clean Docker build and compatibility with these scripts have not been
+verified; the historical commands below are provided for reference.
 
 ## Requirements
 
 * NVIDIA GPU with the latest driver installed
 * docker / nvidia-docker
 
-This build has been tested with Nvidia Drivers 460.91.03 and CUDA 11.2 on a Ubutun 20.04 machine.
+The starter originally reported this build as tested with Nvidia Drivers 460.91.03 and CUDA 11.2 on a Ubutun 20.04 machine.
 Please update the base image if you plan on using older versions of CUDA.
 
 ## Build

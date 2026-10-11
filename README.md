@@ -148,43 +148,49 @@ python create_splits.py --source /path/to/processed \
 Download and extract the [official pretrained checkpoint](https://storage.googleapis.com/download.tensorflow.org/models/object_detection/tf2/20200711/ssd_resnet50_v1_fpn_640x640_coco17_tpu-8.tar.gz) under `experiments/pretrained_model/`. The storage URL provides HTTPS with a matching certificate.
 
 ```bash
+# Choose a NEW directory for each independent reproduction.
+RUN_ROOT=runs/reproduction-01
+mkdir -p runs
+mkdir "$RUN_ROOT" || exit 1  # Stop if this run already exists.
+CHECKPOINT=experiments/pretrained_model/ssd_resnet50_v1_fpn_640x640_coco17_tpu-8/checkpoint/ckpt-0
+
 python edit_config.py --train_dir data/train --eval_dir data/val \
   --batch_size 2 --label_map label_map.pbtxt --steps 2500 \
-  --checkpoint experiments/pretrained_model/ssd_resnet50_v1_fpn_640x640_coco17_tpu-8/checkpoint/ckpt-0 \
-  --output experiments/reference/pipeline_new.config
-# Repeat with --improved and --output experiments/experiment0/pipeline_new.config.
-
+  --checkpoint "$CHECKPOINT" \
+  --output "$RUN_ROOT/reference/pipeline_new.config"
+python edit_config.py --train_dir data/train --eval_dir data/val \
+  --batch_size 2 --label_map label_map.pbtxt --steps 2500 --improved \
+  --checkpoint "$CHECKPOINT" \
+  --output "$RUN_ROOT/experiment0/pipeline_new.config"
 CUDA_VISIBLE_DEVICES='' python prepare_head_transfer.py \
-  --source experiments/pretrained_model/ssd_resnet50_v1_fpn_640x640_coco17_tpu-8/checkpoint/ckpt-0
-# This creates the adapted checkpoint and experiment1 configuration.
+  --source "$CHECKPOINT" \
+  --template "$RUN_ROOT/experiment0/pipeline_new.config" \
+  --output "$RUN_ROOT/experiment1/pipeline_new.config"
+# Adapted weights and their verification report stay inside this new run.
 
-python experiments/model_main_tf2.py --model_dir=experiments/reference \
-  --pipeline_config_path=experiments/reference/pipeline_new.config \
-  --num_train_steps=1000 --checkpoint_every_n=500
-python evaluate_once.py --model-dir experiments/reference --steps 1000
-# Resume with --num_train_steps=2500, evaluate, then run experiment0 and experiment1 likewise.
-# For fresh experiment directories, run_experiments.sh performs this sequence.
-
-python export_metrics.py --logdir experiments --output artifacts/metrics
-python -m tensorboard.main --logdir experiments
+bash run_experiments.sh "$RUN_ROOT"
+python export_metrics.py --logdir "$RUN_ROOT" --output "$RUN_ROOT/metrics"
+python -m tensorboard.main --logdir "$RUN_ROOT"
 ```
+
+The committed `experiments/` and `artifacts/` directories are evidence from the original run; do not use them as output directories for a reproduction. New runs are ignored by Git. Selection refuses an existing destination, and head transfer refuses existing configs or initialization weights. To retry a failed setup, choose a new run directory; do not delete completed evidence.
 
 Do not regenerate a configuration inside an ongoing or completed experiment. Use a new experiment directory for a changed setting. Saved configurations contain the actual workspace paths; regenerate them for another machine.
 
 ### Export and test inference
 
-After all validation runs finish, select the checkpoint using validation mAP:
+Keep `RUN_ROOT` set to the same directory in the same shell. After all validation runs finish, select the checkpoint using validation mAP:
 
 ```bash
-CUDA_VISIBLE_DEVICES='' python select_model.py
+CUDA_VISIBLE_DEVICES='' python select_model.py --logdir "$RUN_ROOT"
 python experiments/exporter_main_v2.py --input_type image_tensor \
-  --pipeline_config_path experiments/selected/pipeline_new.config \
-  --trained_checkpoint_dir experiments/selected \
-  --output_directory experiments/selected/exported
+  --pipeline_config_path "$RUN_ROOT/selected/pipeline_new.config" \
+  --trained_checkpoint_dir "$RUN_ROOT/selected" \
+  --output_directory "$RUN_ROOT/selected/exported"
 python inference_video.py --labelmap_path label_map.pbtxt \
-  --model_path experiments/selected/exported/saved_model \
+  --model_path "$RUN_ROOT/selected/exported/saved_model" \
   --tf_record_path data/test/SEGMENT.tfrecord \
-  --output_path artifacts/inference/SEGMENT.gif \
+  --output_path "$RUN_ROOT/inference/SEGMENT.gif" \
   --fps 10 --max_frames 300 --score_threshold 0.3
 ```
 
@@ -215,8 +221,8 @@ Only after writers stop, `python split_event_files.py` can divide event files in
 
 ## Verification and submission status
 
-- Udacity runtime: **12/12 tests passed**, including configuration generation, sparse class IDs, classifier-channel remapping, split preservation, coordinate scaling, and event-file splitting. See [`tests-final.log`](artifacts/tests-final.log).
-- Local macOS checks: **8 passed, 4 skipped** because TensorFlow/Object Detection API is absent locally; the four skipped tests passed in Udacity. Modified Python modules pass Ruff E/W/F checks (the required Matplotlib backend-before-pyplot import order is exempted), Python 3.7 syntax checks, and shell syntax checks.
+- Original training revision in the Udacity runtime: **12/12 tests passed**, including configuration generation, sparse class IDs, classifier-channel remapping, split preservation, coordinate scaling, and event-file splitting. See [`tests-final.log`](artifacts/tests-final.log).
+- Reproduction-path fix on local macOS: **10 passed, 4 skipped** because TensorFlow/Object Detection API is absent locally. Two new tests verify run-directory routing and selection/output preservation with stubbed training and checkpoint reads; they do not run training. The four API tests passed on the original Udacity revision, but were not rerun there after this fix. Modified Python modules pass Ruff E/W/F/I checks (the required Matplotlib backend-before-pyplot import order is exempted), Python 3.7 syntax checks, and shell syntax checks. Full GPU training was not repeated for the path/import changes.
 - Both notebooks validate and retain their executed outputs: four EDA code cells and two augmentation code cells, with no error outputs.
 - Three training runs, six validation checkpoints, model export, and inference on all 596 held-out frames completed on Udacity's Tesla T4. The saved model is available locally and in the workspace at `experiments/selected/exported/saved_model/`; large weights are intentionally excluded from Git.
 - The local submission copy's oversized event files were split without changing their concatenated bytes. SHA-256 manifests and decoder checks are in `artifacts/event_file_splits.json` and `artifacts/event_split_verification.json`. Original files remain in ignored `artifacts/raw_events/`.
