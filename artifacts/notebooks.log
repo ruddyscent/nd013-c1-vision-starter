@@ -1,0 +1,35 @@
+nohup: ignoring input
+[NbConvertApp] Converting notebook Exploratory Data Analysis.ipynb to notebook
+[NbConvertApp] Executing notebook with kernel: python3
+2026-10-11 03:31:13.533132: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+2026-10-11 03:31:15.191608: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcuda.so.1
+2026-10-11 03:31:15.223508: E tensorflow/stream_executor/cuda/cuda_driver.cc:314] failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected
+2026-10-11 03:31:15.223559: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:169] retrieving CUDA diagnostic information for host: 53acf7e4e88eec57c433a8a84849d290551782f1-9bfcb6c-zjfpn
+2026-10-11 03:31:15.223573: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:176] hostname: 53acf7e4e88eec57c433a8a84849d290551782f1-9bfcb6c-zjfpn
+2026-10-11 03:31:15.223670: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:200] libcuda reported version is: 580.65.6
+2026-10-11 03:31:15.223709: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:204] kernel reported version is: Not found: could not find kernel module information in driver version file contents: "NVRM version: NVIDIA UNIX Open Kernel Module for x86_64  580.65.06  Release Build  (builder@705b48dad54d)  Fri Aug 22 12:15:29 UTC 2025
+GCC version:  Selected multilib: .;@m64
+"
+2026-10-11 03:31:15.224025: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2026-10-11 03:31:15.235274: I tensorflow/core/platform/profile_utils/cpu_utils.cc:104] CPU Frequency: 2299995000 Hz
+2026-10-11 03:31:15.237504: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x58893ac80da0 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2026-10-11 03:31:15.237549: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+[NbConvertApp] Writing 7104556 bytes to Exploratory Data Analysis.ipynb
+[NbConvertApp] Converting notebook Explore augmentations.ipynb to notebook
+[NbConvertApp] Executing notebook with kernel: python3
+2026-10-11 03:31:44.664278: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+2026-10-11 03:31:47.144343: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcuda.so.1
+2026-10-11 03:31:47.192003: E tensorflow/stream_executor/cuda/cuda_driver.cc:314] failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected
+2026-10-11 03:31:47.192063: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:169] retrieving CUDA diagnostic information for host: 53acf7e4e88eec57c433a8a84849d290551782f1-9bfcb6c-zjfpn
+2026-10-11 03:31:47.192088: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:176] hostname: 53acf7e4e88eec57c433a8a84849d290551782f1-9bfcb6c-zjfpn
+2026-10-11 03:31:47.192205: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:200] libcuda reported version is: 580.65.6
+2026-10-11 03:31:47.192249: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:204] kernel reported version is: Not found: could not find kernel module information in driver version file contents: "NVRM version: NVIDIA UNIX Open Kernel Module for x86_64  580.65.06  Release Build  (builder@705b48dad54d)  Fri Aug 22 12:15:29 UTC 2025
+GCC version:  Selected multilib: .;@m64
+"
+2026-10-11 03:31:47.192605: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2026-10-11 03:31:47.203694: I tensorflow/core/platform/profile_utils/cpu_utils.cc:104] CPU Frequency: 2299995000 Hz
+2026-10-11 03:31:47.205859: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x58592933a270 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2026-10-11 03:31:47.205905: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+[NbConvertApp] Writing 4305945 bytes to Explore augmentations.ipynb

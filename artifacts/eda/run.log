@@ -1,0 +1,18 @@
+nohup: ignoring input
+2026-10-11 03:23:25.430547: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+2026-10-11 03:23:26.958826: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcuda.so.1
+2026-10-11 03:23:27.004479: E tensorflow/stream_executor/cuda/cuda_driver.cc:314] failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected
+2026-10-11 03:23:27.004548: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:169] retrieving CUDA diagnostic information for host: 53acf7e4e88eec57c433a8a84849d290551782f1-9bfcb6c-zjfpn
+2026-10-11 03:23:27.004564: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:176] hostname: 53acf7e4e88eec57c433a8a84849d290551782f1-9bfcb6c-zjfpn
+2026-10-11 03:23:27.004680: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:200] libcuda reported version is: 580.65.6
+2026-10-11 03:23:27.004723: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:204] kernel reported version is: Not found: could not find kernel module information in driver version file contents: "NVRM version: NVIDIA UNIX Open Kernel Module for x86_64  580.65.06  Release Build  (builder@705b48dad54d)  Fri Aug 22 12:15:29 UTC 2025
+GCC version:  Selected multilib: .;@m64
+"
+2026-10-11 03:23:27.005074: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2026-10-11 03:23:27.016428: I tensorflow/core/platform/profile_utils/cpu_utils.cc:104] CPU Frequency: 2299995000 Hz
+2026-10-11 03:23:27.018599: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x5673f4036010 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2026-10-11 03:23:27.018647: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+train {"segments": 86, "frames": 1719, "class_counts": {"1": 29710, "2": 8355, "4": 214}, "image_shapes": {"(640, 640, 3)": 1719}, "mean_objects": 22.268179173938336, "brightness_mean": 98.02163175649831, "brightness_std": 27.35666986490591, "box_area_median": 0.0006499096534078319}
+val {"segments": 10, "frames": 198, "class_counts": {"2": 2068, "1": 4953, "4": 56}, "image_shapes": {"(640, 640, 3)": 198}, "mean_objects": 35.74242424242424, "brightness_mean": 116.56433612656512, "brightness_std": 11.410335784931064, "box_area_median": 0.0003564511151523675}
+test {"segments": 3, "frames": 596, "class_counts": {"1": 8867, "2": 844}, "image_shapes": {"(640, 640, 3)": 596}, "mean_objects": 16.293624161073826, "brightness_mean": 77.4104942673378, "brightness_std": 41.370414753707266, "box_area_median": 0.007432738880822853}
