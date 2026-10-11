@@ -1,2 +1,11 @@
 *__pycache__
 *.ipynb_checkpoints/
+.venv/
+.pytest_cache/
+.ruff_cache/
+*.tfrecord
+experiments/pretrained_model/
+experiments/**/ckpt-*
+experiments/**/checkpoint
+experiments/**/exported/
+artifacts/raw_events/
