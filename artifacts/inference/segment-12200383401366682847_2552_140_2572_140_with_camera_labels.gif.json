@@ -1,0 +1,7 @@
+{
+  "frames": 199,
+  "fps": 10.0,
+  "model": "experiments/selected/exported/saved_model",
+  "source": "data/test/segment-12200383401366682847_2552_140_2572_140_with_camera_labels.tfrecord",
+  "score_threshold": 0.3
+}

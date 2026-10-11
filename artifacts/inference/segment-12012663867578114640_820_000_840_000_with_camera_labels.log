@@ -1,0 +1,47 @@
+2026-10-11 05:12:01.754141: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+2026-10-11 05:12:04.250543: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcuda.so.1
+2026-10-11 05:12:04.332440: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1716] Found device 0 with properties: 
+pciBusID: 0000:00:06.0 name: Tesla T4 computeCapability: 7.5
+coreClock: 1.59GHz coreCount: 40 deviceMemorySize: 14.56GiB deviceMemoryBandwidth: 298.08GiB/s
+2026-10-11 05:12:04.332515: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+2026-10-11 05:12:04.334817: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcublas.so.10
+2026-10-11 05:12:04.336932: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcufft.so.10
+2026-10-11 05:12:04.337316: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcurand.so.10
+2026-10-11 05:12:04.339930: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcusolver.so.10
+2026-10-11 05:12:04.341213: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcusparse.so.10
+2026-10-11 05:12:04.346380: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudnn.so.7
+2026-10-11 05:12:04.349938: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1858] Adding visible gpu devices: 0
+2026-10-11 05:12:04.350282: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2026-10-11 05:12:04.361800: I tensorflow/core/platform/profile_utils/cpu_utils.cc:104] CPU Frequency: 2299995000 Hz
+2026-10-11 05:12:04.363945: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x594a929e1380 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2026-10-11 05:12:04.363989: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2026-10-11 05:12:04.637464: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x594a91ee7130 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2026-10-11 05:12:04.637531: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Tesla T4, Compute Capability 7.5
+2026-10-11 05:12:04.639263: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1716] Found device 0 with properties: 
+pciBusID: 0000:00:06.0 name: Tesla T4 computeCapability: 7.5
+coreClock: 1.59GHz coreCount: 40 deviceMemorySize: 14.56GiB deviceMemoryBandwidth: 298.08GiB/s
+2026-10-11 05:12:04.639370: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+2026-10-11 05:12:04.639426: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcublas.so.10
+2026-10-11 05:12:04.639446: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcufft.so.10
+2026-10-11 05:12:04.639465: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcurand.so.10
+2026-10-11 05:12:04.639484: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcusolver.so.10
+2026-10-11 05:12:04.639502: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcusparse.so.10
+2026-10-11 05:12:04.639521: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudnn.so.7
+2026-10-11 05:12:04.642423: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1858] Adding visible gpu devices: 0
+2026-10-11 05:12:04.642505: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+2026-10-11 05:12:05.296569: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1257] Device interconnect StreamExecutor with strength 1 edge matrix:
+2026-10-11 05:12:05.296633: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1263]      0 
+2026-10-11 05:12:05.296647: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1276] 0:   N 
+2026-10-11 05:12:05.300111: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1402] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 13789 MB memory) -> physical GPU (device: 0, name: Tesla T4, pci bus id: 0000:00:06.0, compute capability: 7.5)
+2026-10-11 05:12:17.373013: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudnn.so.7
+2026-10-11 05:12:18.918661: W tensorflow/stream_executor/gpu/asm_compiler.cc:116] *** WARNING *** You are using ptxas 9.0.176, which is older than 9.2.88. ptxas 9.x before 9.2.88 is known to miscompile XLA code, leading to incorrect results or invalid-address errors.
+
+You do not need to update to CUDA 9.2.88; cherry-picking the ptxas binary is sufficient.
+2026-10-11 05:12:19.028485: W tensorflow/stream_executor/gpu/redzone_allocator.cc:314] Internal: ptxas exited with non-zero error code 65280, output: ptxas fatal   : Value 'sm_75' is not defined for option 'gpu-name'
+
+Relying on driver to perform ptx compilation. 
+Modify $PATH to customize ptxas location.
+This message will be only logged once.
+2026-10-11 05:12:19.838430: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcublas.so.10
+{'frames': 199, 'fps': 10.0, 'model': 'experiments/selected/exported/saved_model', 'source': 'data/test/segment-12012663867578114640_820_000_840_000_with_camera_labels.tfrecord', 'score_threshold': 0.3}

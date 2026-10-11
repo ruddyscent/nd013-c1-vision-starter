@@ -1,0 +1,40 @@
+2026-10-11 05:10:58.623674: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+{
+  "experiment": "experiment1",
+  "step": 2500,
+  "validation_map": 0.0851147472858429,
+  "checkpoint": "/workspace/home/experiments/experiment1/ckpt-6",
+  "candidates": [
+    {
+      "experiment": "reference",
+      "step": 1000,
+      "validation_map": 1.7477233996032737e-05
+    },
+    {
+      "experiment": "reference",
+      "step": 2500,
+      "validation_map": 8.057209925027564e-05
+    },
+    {
+      "experiment": "experiment0",
+      "step": 1000,
+      "validation_map": 1.2755522220686544e-05
+    },
+    {
+      "experiment": "experiment0",
+      "step": 2500,
+      "validation_map": 0.003112884471192956
+    },
+    {
+      "experiment": "experiment1",
+      "step": 1000,
+      "validation_map": 0.06380421668291092
+    },
+    {
+      "experiment": "experiment1",
+      "step": 2500,
+      "validation_map": 0.0851147472858429
+    }
+  ],
+  "criterion": "Highest validation COCO mAP; test excluded"
+}

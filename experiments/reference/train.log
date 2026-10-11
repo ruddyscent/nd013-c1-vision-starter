@@ -1,0 +1,809 @@
+nohup: ignoring input
+2026-10-11 03:25:12.880730: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+2026-10-11 03:25:15.581469: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcuda.so.1
+2026-10-11 03:25:15.701310: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1716] Found device 0 with properties: 
+pciBusID: 0000:00:07.0 name: Tesla T4 computeCapability: 7.5
+coreClock: 1.59GHz coreCount: 40 deviceMemorySize: 14.56GiB deviceMemoryBandwidth: 298.08GiB/s
+2026-10-11 03:25:15.701398: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+2026-10-11 03:25:15.703916: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcublas.so.10
+2026-10-11 03:25:15.706040: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcufft.so.10
+2026-10-11 03:25:15.706559: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcurand.so.10
+2026-10-11 03:25:15.709063: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcusolver.so.10
+2026-10-11 03:25:15.710440: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcusparse.so.10
+2026-10-11 03:25:15.715702: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudnn.so.7
+2026-10-11 03:25:15.720565: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1858] Adding visible gpu devices: 0
+2026-10-11 03:25:15.721007: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2026-10-11 03:25:15.732663: I tensorflow/core/platform/profile_utils/cpu_utils.cc:104] CPU Frequency: 2299995000 Hz
+2026-10-11 03:25:15.734711: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x5d3f8b7009d0 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2026-10-11 03:25:15.734755: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2026-10-11 03:25:16.008687: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x5d3f8aec7110 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2026-10-11 03:25:16.008759: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Tesla T4, Compute Capability 7.5
+2026-10-11 03:25:16.010649: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1716] Found device 0 with properties: 
+pciBusID: 0000:00:07.0 name: Tesla T4 computeCapability: 7.5
+coreClock: 1.59GHz coreCount: 40 deviceMemorySize: 14.56GiB deviceMemoryBandwidth: 298.08GiB/s
+2026-10-11 03:25:16.010722: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+2026-10-11 03:25:16.010793: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcublas.so.10
+2026-10-11 03:25:16.010816: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcufft.so.10
+2026-10-11 03:25:16.010837: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcurand.so.10
+2026-10-11 03:25:16.010884: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcusolver.so.10
+2026-10-11 03:25:16.010909: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcusparse.so.10
+2026-10-11 03:25:16.010930: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudnn.so.7
+2026-10-11 03:25:16.013892: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1858] Adding visible gpu devices: 0
+2026-10-11 03:25:16.013965: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+2026-10-11 03:25:16.650099: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1257] Device interconnect StreamExecutor with strength 1 edge matrix:
+2026-10-11 03:25:16.650165: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1263]      0 
+2026-10-11 03:25:16.650182: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1276] 0:   N 
+2026-10-11 03:25:16.653803: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1402] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 13789 MB memory) -> physical GPU (device: 0, name: Tesla T4, pci bus id: 0000:00:07.0, compute capability: 7.5)
+INFO:tensorflow:Using MirroredStrategy with devices ('/job:localhost/replica:0/task:0/device:GPU:0',)
+I1011 03:25:16.659237 137621709088512 mirrored_strategy.py:341] Using MirroredStrategy with devices ('/job:localhost/replica:0/task:0/device:GPU:0',)
+INFO:tensorflow:Maybe overwriting train_steps: 1000
+I1011 03:25:16.666620 137621709088512 config_util.py:552] Maybe overwriting train_steps: 1000
+INFO:tensorflow:Maybe overwriting use_bfloat16: False
+I1011 03:25:16.666767 137621709088512 config_util.py:552] Maybe overwriting use_bfloat16: False
+INFO:tensorflow:Reading unweighted datasets: ['/home/workspace/data/train/segment-10017090168044687777_6380_000_6400_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10023947602400723454_1120_000_1140_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-1005081002024129653_5313_150_5333_150_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10061305430875486848_1080_000_1100_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10072140764565668044_4060_000_4080_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10075870402459732738_1060_000_1080_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10082223140073588526_6140_000_6160_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10094743350625019937_3420_000_3440_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10096619443888687526_2820_000_2840_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10107710434105775874_760_000_780_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10153695247769592104_787_000_807_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10206293520369375008_2796_800_2816_800_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10212406498497081993_5300_000_5320_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-1022527355599519580_4866_960_4886_960_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10226164909075980558_180_000_200_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10231929575853664160_1160_000_1180_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10235335145367115211_5420_000_5440_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10241508783381919015_2889_360_2909_360_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10275144660749673822_5755_561_5775_561_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10327752107000040525_1120_000_1140_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10391312872392849784_4099_400_4119_400_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10444454289801298640_4360_000_4380_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10455472356147194054_1560_000_1580_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10485926982439064520_4980_000_5000_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10498013744573185290_1240_000_1260_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10500357041547037089_1474_800_1494_800_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10517728057304349900_3360_000_3380_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-1051897962568538022_238_170_258_170_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10526338824408452410_5714_660_5734_660_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10584247114982259878_490_000_510_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10588771936253546636_2300_000_2320_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10596949720463106554_1933_530_1953_530_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10599748131695282446_1380_000_1400_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10625026498155904401_200_000_220_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10664823084372323928_4360_000_4380_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10676267326664322837_311_180_331_180_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10723911392655396041_860_000_880_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10724020115992582208_7660_400_7680_400_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10734565072045778791_440_000_460_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10750135302241325253_180_000_200_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10770759614217273359_1465_000_1485_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10786629299947667143_3440_000_3460_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10793018113277660068_2714_540_2734_540_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-1083056852838271990_4080_000_4100_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10876852935525353526_1640_000_1660_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10923963890428322967_1445_000_1465_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10927752430968246422_4940_000_4960_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10940952441434390507_1888_710_1908_710_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10963653239323173269_1924_000_1944_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10964956617027590844_1584_680_1604_680_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10975280749486260148_940_000_960_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11004685739714500220_2300_000_2320_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11017034898130016754_697_830_717_830_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11060291335850384275_3761_210_3781_210_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11070802577416161387_740_000_760_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11076364019363412893_1711_000_1731_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11113047206980595400_2560_000_2580_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11119453952284076633_1369_940_1389_940_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11126313430116606120_1439_990_1459_990_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11139647661584646830_5470_000_5490_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11183906854663518829_2294_000_2314_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11199484219241918646_2810_030_2830_030_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11219370372259322863_5320_000_5340_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11236550977973464715_3620_000_3640_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11252086830380107152_1540_000_1560_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11318901554551149504_520_000_540_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11343624116265195592_5910_530_5930_530_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11355519273066561009_5323_000_5343_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11379226583756500423_6230_810_6250_810_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11388947676680954806_5427_320_5447_320_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11392401368700458296_1086_429_1106_429_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11454085070345530663_1905_000_1925_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-1146261869236413282_1680_000_1700_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11486225968269855324_92_000_112_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11489533038039664633_4820_000_4840_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11566385337103696871_5740_000_5760_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11588853832866011756_2184_462_2204_462_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11623618970700582562_2840_367_2860_367_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11674150664140226235_680_000_700_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11718898130355901268_2300_000_2320_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-1172406780360799916_1660_000_1680_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11799592541704458019_9828_750_9848_750_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11839652018869852123_2565_000_2585_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11846396154240966170_3540_000_3560_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11847506886204460250_1640_000_1660_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-1191788760630624072_3880_000_3900_000_with_camera_labels.tfrecord']
+I1011 03:25:17.011116 137621709088512 dataset_builder.py:163] Reading unweighted datasets: ['/home/workspace/data/train/segment-10017090168044687777_6380_000_6400_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10023947602400723454_1120_000_1140_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-1005081002024129653_5313_150_5333_150_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10061305430875486848_1080_000_1100_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10072140764565668044_4060_000_4080_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10075870402459732738_1060_000_1080_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10082223140073588526_6140_000_6160_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10094743350625019937_3420_000_3440_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10096619443888687526_2820_000_2840_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10107710434105775874_760_000_780_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10153695247769592104_787_000_807_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10206293520369375008_2796_800_2816_800_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10212406498497081993_5300_000_5320_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-1022527355599519580_4866_960_4886_960_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10226164909075980558_180_000_200_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10231929575853664160_1160_000_1180_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10235335145367115211_5420_000_5440_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10241508783381919015_2889_360_2909_360_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10275144660749673822_5755_561_5775_561_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10327752107000040525_1120_000_1140_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10391312872392849784_4099_400_4119_400_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10444454289801298640_4360_000_4380_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10455472356147194054_1560_000_1580_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10485926982439064520_4980_000_5000_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10498013744573185290_1240_000_1260_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10500357041547037089_1474_800_1494_800_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10517728057304349900_3360_000_3380_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-1051897962568538022_238_170_258_170_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10526338824408452410_5714_660_5734_660_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10584247114982259878_490_000_510_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10588771936253546636_2300_000_2320_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10596949720463106554_1933_530_1953_530_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10599748131695282446_1380_000_1400_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10625026498155904401_200_000_220_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10664823084372323928_4360_000_4380_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10676267326664322837_311_180_331_180_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10723911392655396041_860_000_880_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10724020115992582208_7660_400_7680_400_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10734565072045778791_440_000_460_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10750135302241325253_180_000_200_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10770759614217273359_1465_000_1485_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10786629299947667143_3440_000_3460_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10793018113277660068_2714_540_2734_540_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-1083056852838271990_4080_000_4100_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10876852935525353526_1640_000_1660_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10923963890428322967_1445_000_1465_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10927752430968246422_4940_000_4960_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10940952441434390507_1888_710_1908_710_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10963653239323173269_1924_000_1944_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10964956617027590844_1584_680_1604_680_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10975280749486260148_940_000_960_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11004685739714500220_2300_000_2320_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11017034898130016754_697_830_717_830_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11060291335850384275_3761_210_3781_210_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11070802577416161387_740_000_760_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11076364019363412893_1711_000_1731_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11113047206980595400_2560_000_2580_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11119453952284076633_1369_940_1389_940_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11126313430116606120_1439_990_1459_990_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11139647661584646830_5470_000_5490_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11183906854663518829_2294_000_2314_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11199484219241918646_2810_030_2830_030_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11219370372259322863_5320_000_5340_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11236550977973464715_3620_000_3640_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11252086830380107152_1540_000_1560_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11318901554551149504_520_000_540_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11343624116265195592_5910_530_5930_530_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11355519273066561009_5323_000_5343_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11379226583756500423_6230_810_6250_810_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11388947676680954806_5427_320_5447_320_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11392401368700458296_1086_429_1106_429_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11454085070345530663_1905_000_1925_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-1146261869236413282_1680_000_1700_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11486225968269855324_92_000_112_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11489533038039664633_4820_000_4840_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11566385337103696871_5740_000_5760_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11588853832866011756_2184_462_2204_462_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11623618970700582562_2840_367_2860_367_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11674150664140226235_680_000_700_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11718898130355901268_2300_000_2320_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-1172406780360799916_1660_000_1680_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11799592541704458019_9828_750_9848_750_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11839652018869852123_2565_000_2585_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11846396154240966170_3540_000_3560_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11847506886204460250_1640_000_1660_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-1191788760630624072_3880_000_3900_000_with_camera_labels.tfrecord']
+INFO:tensorflow:Reading record datasets for input file: ['/home/workspace/data/train/segment-10017090168044687777_6380_000_6400_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10023947602400723454_1120_000_1140_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-1005081002024129653_5313_150_5333_150_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10061305430875486848_1080_000_1100_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10072140764565668044_4060_000_4080_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10075870402459732738_1060_000_1080_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10082223140073588526_6140_000_6160_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10094743350625019937_3420_000_3440_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10096619443888687526_2820_000_2840_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10107710434105775874_760_000_780_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10153695247769592104_787_000_807_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10206293520369375008_2796_800_2816_800_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10212406498497081993_5300_000_5320_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-1022527355599519580_4866_960_4886_960_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10226164909075980558_180_000_200_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10231929575853664160_1160_000_1180_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10235335145367115211_5420_000_5440_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10241508783381919015_2889_360_2909_360_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10275144660749673822_5755_561_5775_561_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10327752107000040525_1120_000_1140_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10391312872392849784_4099_400_4119_400_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10444454289801298640_4360_000_4380_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10455472356147194054_1560_000_1580_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10485926982439064520_4980_000_5000_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10498013744573185290_1240_000_1260_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10500357041547037089_1474_800_1494_800_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10517728057304349900_3360_000_3380_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-1051897962568538022_238_170_258_170_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10526338824408452410_5714_660_5734_660_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10584247114982259878_490_000_510_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10588771936253546636_2300_000_2320_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10596949720463106554_1933_530_1953_530_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10599748131695282446_1380_000_1400_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10625026498155904401_200_000_220_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10664823084372323928_4360_000_4380_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10676267326664322837_311_180_331_180_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10723911392655396041_860_000_880_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10724020115992582208_7660_400_7680_400_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10734565072045778791_440_000_460_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10750135302241325253_180_000_200_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10770759614217273359_1465_000_1485_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10786629299947667143_3440_000_3460_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10793018113277660068_2714_540_2734_540_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-1083056852838271990_4080_000_4100_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10876852935525353526_1640_000_1660_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10923963890428322967_1445_000_1465_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10927752430968246422_4940_000_4960_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10940952441434390507_1888_710_1908_710_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10963653239323173269_1924_000_1944_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10964956617027590844_1584_680_1604_680_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10975280749486260148_940_000_960_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11004685739714500220_2300_000_2320_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11017034898130016754_697_830_717_830_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11060291335850384275_3761_210_3781_210_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11070802577416161387_740_000_760_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11076364019363412893_1711_000_1731_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11113047206980595400_2560_000_2580_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11119453952284076633_1369_940_1389_940_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11126313430116606120_1439_990_1459_990_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11139647661584646830_5470_000_5490_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11183906854663518829_2294_000_2314_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11199484219241918646_2810_030_2830_030_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11219370372259322863_5320_000_5340_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11236550977973464715_3620_000_3640_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11252086830380107152_1540_000_1560_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11318901554551149504_520_000_540_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11343624116265195592_5910_530_5930_530_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11355519273066561009_5323_000_5343_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11379226583756500423_6230_810_6250_810_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11388947676680954806_5427_320_5447_320_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11392401368700458296_1086_429_1106_429_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11454085070345530663_1905_000_1925_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-1146261869236413282_1680_000_1700_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11486225968269855324_92_000_112_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11489533038039664633_4820_000_4840_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11566385337103696871_5740_000_5760_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11588853832866011756_2184_462_2204_462_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11623618970700582562_2840_367_2860_367_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11674150664140226235_680_000_700_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11718898130355901268_2300_000_2320_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-1172406780360799916_1660_000_1680_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11799592541704458019_9828_750_9848_750_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11839652018869852123_2565_000_2585_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11846396154240966170_3540_000_3560_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11847506886204460250_1640_000_1660_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-1191788760630624072_3880_000_3900_000_with_camera_labels.tfrecord']
+I1011 03:25:17.109259 137621709088512 dataset_builder.py:80] Reading record datasets for input file: ['/home/workspace/data/train/segment-10017090168044687777_6380_000_6400_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10023947602400723454_1120_000_1140_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-1005081002024129653_5313_150_5333_150_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10061305430875486848_1080_000_1100_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10072140764565668044_4060_000_4080_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10075870402459732738_1060_000_1080_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10082223140073588526_6140_000_6160_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10094743350625019937_3420_000_3440_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10096619443888687526_2820_000_2840_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10107710434105775874_760_000_780_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10153695247769592104_787_000_807_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10206293520369375008_2796_800_2816_800_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10212406498497081993_5300_000_5320_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-1022527355599519580_4866_960_4886_960_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10226164909075980558_180_000_200_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10231929575853664160_1160_000_1180_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10235335145367115211_5420_000_5440_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10241508783381919015_2889_360_2909_360_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10275144660749673822_5755_561_5775_561_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10327752107000040525_1120_000_1140_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10391312872392849784_4099_400_4119_400_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10444454289801298640_4360_000_4380_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10455472356147194054_1560_000_1580_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10485926982439064520_4980_000_5000_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10498013744573185290_1240_000_1260_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10500357041547037089_1474_800_1494_800_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10517728057304349900_3360_000_3380_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-1051897962568538022_238_170_258_170_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10526338824408452410_5714_660_5734_660_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10584247114982259878_490_000_510_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10588771936253546636_2300_000_2320_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10596949720463106554_1933_530_1953_530_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10599748131695282446_1380_000_1400_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10625026498155904401_200_000_220_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10664823084372323928_4360_000_4380_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10676267326664322837_311_180_331_180_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10723911392655396041_860_000_880_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10724020115992582208_7660_400_7680_400_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10734565072045778791_440_000_460_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10750135302241325253_180_000_200_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10770759614217273359_1465_000_1485_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10786629299947667143_3440_000_3460_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10793018113277660068_2714_540_2734_540_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-1083056852838271990_4080_000_4100_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10876852935525353526_1640_000_1660_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10923963890428322967_1445_000_1465_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10927752430968246422_4940_000_4960_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10940952441434390507_1888_710_1908_710_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10963653239323173269_1924_000_1944_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10964956617027590844_1584_680_1604_680_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-10975280749486260148_940_000_960_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11004685739714500220_2300_000_2320_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11017034898130016754_697_830_717_830_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11060291335850384275_3761_210_3781_210_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11070802577416161387_740_000_760_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11076364019363412893_1711_000_1731_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11113047206980595400_2560_000_2580_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11119453952284076633_1369_940_1389_940_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11126313430116606120_1439_990_1459_990_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11139647661584646830_5470_000_5490_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11183906854663518829_2294_000_2314_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11199484219241918646_2810_030_2830_030_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11219370372259322863_5320_000_5340_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11236550977973464715_3620_000_3640_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11252086830380107152_1540_000_1560_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11318901554551149504_520_000_540_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11343624116265195592_5910_530_5930_530_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11355519273066561009_5323_000_5343_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11379226583756500423_6230_810_6250_810_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11388947676680954806_5427_320_5447_320_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11392401368700458296_1086_429_1106_429_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11454085070345530663_1905_000_1925_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-1146261869236413282_1680_000_1700_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11486225968269855324_92_000_112_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11489533038039664633_4820_000_4840_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11566385337103696871_5740_000_5760_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11588853832866011756_2184_462_2204_462_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11623618970700582562_2840_367_2860_367_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11674150664140226235_680_000_700_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11718898130355901268_2300_000_2320_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-1172406780360799916_1660_000_1680_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11799592541704458019_9828_750_9848_750_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11839652018869852123_2565_000_2585_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11846396154240966170_3540_000_3560_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-11847506886204460250_1640_000_1660_000_with_camera_labels.tfrecord', '/home/workspace/data/train/segment-1191788760630624072_3880_000_3900_000_with_camera_labels.tfrecord']
+INFO:tensorflow:Number of filenames to read: 86
+I1011 03:25:17.109492 137621709088512 dataset_builder.py:81] Number of filenames to read: 86
+WARNING:tensorflow:From /data/virtual_envs/sdc-c1-gpu-augment/lib/python3.7/site-packages/object_detection/builders/dataset_builder.py:105: parallel_interleave (from tensorflow.python.data.experimental.ops.interleave_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.Dataset.interleave(map_func, cycle_length, block_length, num_parallel_calls=tf.data.experimental.AUTOTUNE)` instead. If sloppy execution is desired, use `tf.data.Options.experimental_deterministic`.
+W1011 03:25:17.114091 137621709088512 deprecation.py:323] From /data/virtual_envs/sdc-c1-gpu-augment/lib/python3.7/site-packages/object_detection/builders/dataset_builder.py:105: parallel_interleave (from tensorflow.python.data.experimental.ops.interleave_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.Dataset.interleave(map_func, cycle_length, block_length, num_parallel_calls=tf.data.experimental.AUTOTUNE)` instead. If sloppy execution is desired, use `tf.data.Options.experimental_deterministic`.
+WARNING:tensorflow:From /data/virtual_envs/sdc-c1-gpu-augment/lib/python3.7/site-packages/object_detection/builders/dataset_builder.py:237: DatasetV1.map_with_legacy_function (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.Dataset.map()
+W1011 03:25:17.170712 137621709088512 deprecation.py:323] From /data/virtual_envs/sdc-c1-gpu-augment/lib/python3.7/site-packages/object_detection/builders/dataset_builder.py:237: DatasetV1.map_with_legacy_function (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.Dataset.map()
+WARNING:tensorflow:From /data/virtual_envs/sdc-c1-gpu-augment/lib/python3.7/site-packages/tensorflow/python/util/dispatch.py:201: sparse_to_dense (from tensorflow.python.ops.sparse_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Create a `tf.sparse.SparseTensor` and use `tf.sparse.to_dense` instead.
+W1011 03:25:23.702686 137621709088512 deprecation.py:323] From /data/virtual_envs/sdc-c1-gpu-augment/lib/python3.7/site-packages/tensorflow/python/util/dispatch.py:201: sparse_to_dense (from tensorflow.python.ops.sparse_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Create a `tf.sparse.SparseTensor` and use `tf.sparse.to_dense` instead.
+WARNING:tensorflow:From /data/virtual_envs/sdc-c1-gpu-augment/lib/python3.7/site-packages/tensorflow/python/util/dispatch.py:201: sample_distorted_bounding_box (from tensorflow.python.ops.image_ops_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+`seed2` arg is deprecated.Use sample_distorted_bounding_box_v2 instead.
+W1011 03:25:26.509561 137621709088512 deprecation.py:323] From /data/virtual_envs/sdc-c1-gpu-augment/lib/python3.7/site-packages/tensorflow/python/util/dispatch.py:201: sample_distorted_bounding_box (from tensorflow.python.ops.image_ops_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+`seed2` arg is deprecated.Use sample_distorted_bounding_box_v2 instead.
+WARNING:tensorflow:From /data/virtual_envs/sdc-c1-gpu-augment/lib/python3.7/site-packages/object_detection/inputs.py:282: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+W1011 03:25:28.047681 137621709088512 deprecation.py:323] From /data/virtual_envs/sdc-c1-gpu-augment/lib/python3.7/site-packages/object_detection/inputs.py:282: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+WARNING:tensorflow:From /data/virtual_envs/sdc-c1-gpu-augment/lib/python3.7/site-packages/object_detection/model_lib_v2.py:160: set_learning_phase (from tensorflow.python.keras.backend) is deprecated and will be removed after 2020-10-11.
+Instructions for updating:
+Simply pass a True/False value to the `training` argument of the `__call__` method of your layer or model.
+W1011 03:25:32.943236 137582482380544 deprecation.py:323] From /data/virtual_envs/sdc-c1-gpu-augment/lib/python3.7/site-packages/object_detection/model_lib_v2.py:160: set_learning_phase (from tensorflow.python.keras.backend) is deprecated and will be removed after 2020-10-11.
+Instructions for updating:
+Simply pass a True/False value to the `training` argument of the `__call__` method of your layer or model.
+2026-10-11 03:25:49.262575: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcublas.so.10
+2026-10-11 03:25:49.916075: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudnn.so.7
+2026-10-11 03:25:52.364136: W tensorflow/stream_executor/gpu/asm_compiler.cc:116] *** WARNING *** You are using ptxas 9.0.176, which is older than 9.2.88. ptxas 9.x before 9.2.88 is known to miscompile XLA code, leading to incorrect results or invalid-address errors.
+
+You do not need to update to CUDA 9.2.88; cherry-picking the ptxas binary is sufficient.
+2026-10-11 03:25:52.503983: W tensorflow/stream_executor/gpu/redzone_allocator.cc:314] Internal: ptxas exited with non-zero error code 65280, output: ptxas fatal   : Value 'sm_75' is not defined for option 'gpu-name'
+
+Relying on driver to perform ptx compilation. 
+Modify $PATH to customize ptxas location.
+This message will be only logged once.
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._groundtruth_lists
+W1011 03:26:43.534158 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._groundtruth_lists
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor
+W1011 03:26:43.534587 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._batched_prediction_tensor_names
+W1011 03:26:43.534648 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._batched_prediction_tensor_names
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._box_prediction_head
+W1011 03:26:43.534694 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._box_prediction_head
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._prediction_heads
+W1011 03:26:43.534736 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._prediction_heads
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._sorted_head_names
+W1011 03:26:43.534777 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._sorted_head_names
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._additional_projection_layers
+W1011 03:26:43.534817 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._additional_projection_layers
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads
+W1011 03:26:43.534877 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._head_scope_conv_layers
+W1011 03:26:43.534936 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._head_scope_conv_layers
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._box_prediction_head._box_encoder_layers
+W1011 03:26:43.534973 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._box_prediction_head._box_encoder_layers
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._prediction_heads.class_predictions_with_background
+W1011 03:26:43.535013 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._prediction_heads.class_predictions_with_background
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._additional_projection_layers.0
+W1011 03:26:43.535051 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._additional_projection_layers.0
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._additional_projection_layers.1
+W1011 03:26:43.535087 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._additional_projection_layers.1
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._additional_projection_layers.2
+W1011 03:26:43.535131 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._additional_projection_layers.2
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._additional_projection_layers.3
+W1011 03:26:43.535168 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._additional_projection_layers.3
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._additional_projection_layers.4
+W1011 03:26:43.535204 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._additional_projection_layers.4
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings
+W1011 03:26:43.535241 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background
+W1011 03:26:43.535277 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._head_scope_conv_layers.BoxPredictionTower
+W1011 03:26:43.535313 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._head_scope_conv_layers.BoxPredictionTower
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._head_scope_conv_layers.ClassPredictionTower
+W1011 03:26:43.535350 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._head_scope_conv_layers.ClassPredictionTower
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._box_prediction_head._box_encoder_layers.0
+W1011 03:26:43.535396 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._box_prediction_head._box_encoder_layers.0
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._prediction_heads.class_predictions_with_background._class_predictor_layers
+W1011 03:26:43.535433 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._prediction_heads.class_predictions_with_background._class_predictor_layers
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.0
+W1011 03:26:43.535473 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.0
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.1
+W1011 03:26:43.535518 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.1
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.2
+W1011 03:26:43.535555 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.2
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.3
+W1011 03:26:43.535592 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.3
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.4
+W1011 03:26:43.535628 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.4
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.0
+W1011 03:26:43.535665 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.0
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.1
+W1011 03:26:43.535702 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.1
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.2
+W1011 03:26:43.535739 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.2
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.3
+W1011 03:26:43.535775 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.3
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.4
+W1011 03:26:43.535811 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.4
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._head_scope_conv_layers.BoxPredictionTower.0
+W1011 03:26:43.535866 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._head_scope_conv_layers.BoxPredictionTower.0
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._head_scope_conv_layers.BoxPredictionTower.1
+W1011 03:26:43.535903 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._head_scope_conv_layers.BoxPredictionTower.1
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._head_scope_conv_layers.BoxPredictionTower.2
+W1011 03:26:43.535940 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._head_scope_conv_layers.BoxPredictionTower.2
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._head_scope_conv_layers.BoxPredictionTower.3
+W1011 03:26:43.535976 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._head_scope_conv_layers.BoxPredictionTower.3
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._head_scope_conv_layers.ClassPredictionTower.0
+W1011 03:26:43.536019 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._head_scope_conv_layers.ClassPredictionTower.0
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._head_scope_conv_layers.ClassPredictionTower.1
+W1011 03:26:43.536056 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._head_scope_conv_layers.ClassPredictionTower.1
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._head_scope_conv_layers.ClassPredictionTower.2
+W1011 03:26:43.536092 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._head_scope_conv_layers.ClassPredictionTower.2
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._head_scope_conv_layers.ClassPredictionTower.3
+W1011 03:26:43.536134 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._head_scope_conv_layers.ClassPredictionTower.3
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._box_prediction_head._box_encoder_layers.0.kernel
+W1011 03:26:43.536201 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._box_prediction_head._box_encoder_layers.0.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._box_prediction_head._box_encoder_layers.0.bias
+W1011 03:26:43.536239 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._box_prediction_head._box_encoder_layers.0.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._prediction_heads.class_predictions_with_background._class_predictor_layers.0
+W1011 03:26:43.536277 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._prediction_heads.class_predictions_with_background._class_predictor_layers.0
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.0.1
+W1011 03:26:43.536314 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.0.1
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.0.2
+W1011 03:26:43.536360 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.0.2
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.0.4
+W1011 03:26:43.536394 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.0.4
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.0.5
+W1011 03:26:43.536448 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.0.5
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.0.7
+W1011 03:26:43.536484 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.0.7
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.0.8
+W1011 03:26:43.536520 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.0.8
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.0.10
+W1011 03:26:43.536556 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.0.10
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.0.11
+W1011 03:26:43.536592 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.0.11
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.1.1
+W1011 03:26:43.536638 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.1.1
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.1.2
+W1011 03:26:43.536674 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.1.2
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.1.4
+W1011 03:26:43.536709 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.1.4
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.1.5
+W1011 03:26:43.536745 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.1.5
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.1.7
+W1011 03:26:43.536781 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.1.7
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.1.8
+W1011 03:26:43.536817 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.1.8
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.1.10
+W1011 03:26:43.536870 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.1.10
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.1.11
+W1011 03:26:43.536906 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.1.11
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.2.1
+W1011 03:26:43.536942 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.2.1
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.2.2
+W1011 03:26:43.536978 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.2.2
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.2.4
+W1011 03:26:43.537033 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.2.4
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.2.5
+W1011 03:26:43.537071 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.2.5
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.2.7
+W1011 03:26:43.537118 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.2.7
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.2.8
+W1011 03:26:43.537158 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.2.8
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.2.10
+W1011 03:26:43.537206 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.2.10
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.2.11
+W1011 03:26:43.537245 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.2.11
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.3.1
+W1011 03:26:43.537284 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.3.1
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.3.2
+W1011 03:26:43.537322 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.3.2
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.3.4
+W1011 03:26:43.537360 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.3.4
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.3.5
+W1011 03:26:43.537399 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.3.5
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.3.7
+W1011 03:26:43.537437 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.3.7
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.3.8
+W1011 03:26:43.537476 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.3.8
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.3.10
+W1011 03:26:43.537514 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.3.10
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.3.11
+W1011 03:26:43.537552 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.3.11
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.4.1
+W1011 03:26:43.537590 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.4.1
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.4.2
+W1011 03:26:43.537629 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.4.2
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.4.4
+W1011 03:26:43.537667 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.4.4
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.4.5
+W1011 03:26:43.537706 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.4.5
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.4.7
+W1011 03:26:43.537753 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.4.7
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.4.8
+W1011 03:26:43.537806 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.4.8
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.4.10
+W1011 03:26:43.537854 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.4.10
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.4.11
+W1011 03:26:43.537896 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.4.11
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.0.1
+W1011 03:26:43.537932 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.0.1
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.0.2
+W1011 03:26:43.537969 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.0.2
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.0.4
+W1011 03:26:43.538006 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.0.4
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.0.5
+W1011 03:26:43.538042 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.0.5
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.0.7
+W1011 03:26:43.538079 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.0.7
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.0.8
+W1011 03:26:43.538120 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.0.8
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.0.10
+W1011 03:26:43.538156 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.0.10
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.0.11
+W1011 03:26:43.538203 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.0.11
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.1.1
+W1011 03:26:43.538236 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.1.1
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.1.2
+W1011 03:26:43.538277 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.1.2
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.1.4
+W1011 03:26:43.538331 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.1.4
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.1.5
+W1011 03:26:43.538367 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.1.5
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.1.7
+W1011 03:26:43.538403 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.1.7
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.1.8
+W1011 03:26:43.538438 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.1.8
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.1.10
+W1011 03:26:43.538474 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.1.10
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.1.11
+W1011 03:26:43.538511 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.1.11
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.2.1
+W1011 03:26:43.538547 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.2.1
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.2.2
+W1011 03:26:43.538583 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.2.2
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.2.4
+W1011 03:26:43.538638 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.2.4
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.2.5
+W1011 03:26:43.538678 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.2.5
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.2.7
+W1011 03:26:43.538719 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.2.7
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.2.8
+W1011 03:26:43.538759 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.2.8
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.2.10
+W1011 03:26:43.538808 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.2.10
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.2.11
+W1011 03:26:43.538866 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.2.11
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.3.1
+W1011 03:26:43.538907 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.3.1
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.3.2
+W1011 03:26:43.538947 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.3.2
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.3.4
+W1011 03:26:43.538988 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.3.4
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.3.5
+W1011 03:26:43.539027 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.3.5
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.3.7
+W1011 03:26:43.539067 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.3.7
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.3.8
+W1011 03:26:43.539113 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.3.8
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.3.10
+W1011 03:26:43.539154 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.3.10
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.3.11
+W1011 03:26:43.539194 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.3.11
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.4.1
+W1011 03:26:43.539234 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.4.1
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.4.2
+W1011 03:26:43.539274 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.4.2
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.4.4
+W1011 03:26:43.539322 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.4.4
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.4.5
+W1011 03:26:43.539364 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.4.5
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.4.7
+W1011 03:26:43.539404 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.4.7
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.4.8
+W1011 03:26:43.539444 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.4.8
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.4.10
+W1011 03:26:43.539484 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.4.10
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.4.11
+W1011 03:26:43.539524 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.4.11
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._head_scope_conv_layers.BoxPredictionTower.0.kernel
+W1011 03:26:43.539564 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._head_scope_conv_layers.BoxPredictionTower.0.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._head_scope_conv_layers.BoxPredictionTower.1.kernel
+W1011 03:26:43.539604 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._head_scope_conv_layers.BoxPredictionTower.1.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._head_scope_conv_layers.BoxPredictionTower.2.kernel
+W1011 03:26:43.539644 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._head_scope_conv_layers.BoxPredictionTower.2.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._head_scope_conv_layers.BoxPredictionTower.3.kernel
+W1011 03:26:43.539683 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._head_scope_conv_layers.BoxPredictionTower.3.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._head_scope_conv_layers.ClassPredictionTower.0.kernel
+W1011 03:26:43.539724 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._head_scope_conv_layers.ClassPredictionTower.0.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._head_scope_conv_layers.ClassPredictionTower.1.kernel
+W1011 03:26:43.539763 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._head_scope_conv_layers.ClassPredictionTower.1.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._head_scope_conv_layers.ClassPredictionTower.2.kernel
+W1011 03:26:43.539815 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._head_scope_conv_layers.ClassPredictionTower.2.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._head_scope_conv_layers.ClassPredictionTower.3.kernel
+W1011 03:26:43.539880 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._head_scope_conv_layers.ClassPredictionTower.3.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._prediction_heads.class_predictions_with_background._class_predictor_layers.0.kernel
+W1011 03:26:43.539918 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._prediction_heads.class_predictions_with_background._class_predictor_layers.0.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._prediction_heads.class_predictions_with_background._class_predictor_layers.0.bias
+W1011 03:26:43.539953 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._prediction_heads.class_predictions_with_background._class_predictor_layers.0.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.0.1.axis
+W1011 03:26:43.539986 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.0.1.axis
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.0.1.gamma
+W1011 03:26:43.540020 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.0.1.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.0.1.beta
+W1011 03:26:43.540054 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.0.1.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.0.1.moving_mean
+W1011 03:26:43.540087 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.0.1.moving_mean
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.0.1.moving_variance
+W1011 03:26:43.540126 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.0.1.moving_variance
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.0.4.axis
+W1011 03:26:43.540160 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.0.4.axis
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.0.4.gamma
+W1011 03:26:43.540194 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.0.4.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.0.4.beta
+W1011 03:26:43.540228 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.0.4.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.0.4.moving_mean
+W1011 03:26:43.540261 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.0.4.moving_mean
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.0.4.moving_variance
+W1011 03:26:43.540295 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.0.4.moving_variance
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.0.7.axis
+W1011 03:26:43.540329 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.0.7.axis
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.0.7.gamma
+W1011 03:26:43.540370 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.0.7.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.0.7.beta
+W1011 03:26:43.540405 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.0.7.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.0.7.moving_mean
+W1011 03:26:43.540438 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.0.7.moving_mean
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.0.7.moving_variance
+W1011 03:26:43.540472 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.0.7.moving_variance
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.0.10.axis
+W1011 03:26:43.540506 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.0.10.axis
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.0.10.gamma
+W1011 03:26:43.540540 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.0.10.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.0.10.beta
+W1011 03:26:43.540574 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.0.10.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.0.10.moving_mean
+W1011 03:26:43.540608 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.0.10.moving_mean
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.0.10.moving_variance
+W1011 03:26:43.540642 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.0.10.moving_variance
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.1.1.axis
+W1011 03:26:43.540676 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.1.1.axis
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.1.1.gamma
+W1011 03:26:43.540710 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.1.1.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.1.1.beta
+W1011 03:26:43.540749 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.1.1.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.1.1.moving_mean
+W1011 03:26:43.540802 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.1.1.moving_mean
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.1.1.moving_variance
+W1011 03:26:43.540883 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.1.1.moving_variance
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.1.4.axis
+W1011 03:26:43.540930 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.1.4.axis
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.1.4.gamma
+W1011 03:26:43.540976 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.1.4.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.1.4.beta
+W1011 03:26:43.541017 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.1.4.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.1.4.moving_mean
+W1011 03:26:43.541057 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.1.4.moving_mean
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.1.4.moving_variance
+W1011 03:26:43.541097 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.1.4.moving_variance
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.1.7.axis
+W1011 03:26:43.541143 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.1.7.axis
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.1.7.gamma
+W1011 03:26:43.541183 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.1.7.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.1.7.beta
+W1011 03:26:43.541224 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.1.7.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.1.7.moving_mean
+W1011 03:26:43.541264 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.1.7.moving_mean
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.1.7.moving_variance
+W1011 03:26:43.541304 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.1.7.moving_variance
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.1.10.axis
+W1011 03:26:43.541344 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.1.10.axis
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.1.10.gamma
+W1011 03:26:43.541384 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.1.10.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.1.10.beta
+W1011 03:26:43.541424 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.1.10.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.1.10.moving_mean
+W1011 03:26:43.541473 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.1.10.moving_mean
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.1.10.moving_variance
+W1011 03:26:43.541514 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.1.10.moving_variance
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.2.1.axis
+W1011 03:26:43.541555 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.2.1.axis
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.2.1.gamma
+W1011 03:26:43.541595 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.2.1.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.2.1.beta
+W1011 03:26:43.541635 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.2.1.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.2.1.moving_mean
+W1011 03:26:43.541675 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.2.1.moving_mean
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.2.1.moving_variance
+W1011 03:26:43.541715 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.2.1.moving_variance
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.2.4.axis
+W1011 03:26:43.541755 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.2.4.axis
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.2.4.gamma
+W1011 03:26:43.541796 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.2.4.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.2.4.beta
+W1011 03:26:43.541850 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.2.4.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.2.4.moving_mean
+W1011 03:26:43.541894 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.2.4.moving_mean
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.2.4.moving_variance
+W1011 03:26:43.541935 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.2.4.moving_variance
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.2.7.axis
+W1011 03:26:43.541975 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.2.7.axis
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.2.7.gamma
+W1011 03:26:43.542023 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.2.7.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.2.7.beta
+W1011 03:26:43.542064 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.2.7.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.2.7.moving_mean
+W1011 03:26:43.542109 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.2.7.moving_mean
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.2.7.moving_variance
+W1011 03:26:43.542162 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.2.7.moving_variance
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.2.10.axis
+W1011 03:26:43.542199 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.2.10.axis
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.2.10.gamma
+W1011 03:26:43.542235 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.2.10.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.2.10.beta
+W1011 03:26:43.542271 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.2.10.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.2.10.moving_mean
+W1011 03:26:43.542319 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.2.10.moving_mean
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.2.10.moving_variance
+W1011 03:26:43.542353 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.2.10.moving_variance
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.3.1.axis
+W1011 03:26:43.542387 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.3.1.axis
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.3.1.gamma
+W1011 03:26:43.542421 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.3.1.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.3.1.beta
+W1011 03:26:43.542454 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.3.1.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.3.1.moving_mean
+W1011 03:26:43.542488 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.3.1.moving_mean
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.3.1.moving_variance
+W1011 03:26:43.542528 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.3.1.moving_variance
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.3.4.axis
+W1011 03:26:43.542564 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.3.4.axis
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.3.4.gamma
+W1011 03:26:43.542598 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.3.4.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.3.4.beta
+W1011 03:26:43.542632 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.3.4.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.3.4.moving_mean
+W1011 03:26:43.542665 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.3.4.moving_mean
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.3.4.moving_variance
+W1011 03:26:43.542699 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.3.4.moving_variance
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.3.7.axis
+W1011 03:26:43.542733 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.3.7.axis
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.3.7.gamma
+W1011 03:26:43.542784 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.3.7.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.3.7.beta
+W1011 03:26:43.542820 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.3.7.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.3.7.moving_mean
+W1011 03:26:43.542871 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.3.7.moving_mean
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.3.7.moving_variance
+W1011 03:26:43.542908 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.3.7.moving_variance
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.3.10.axis
+W1011 03:26:43.542944 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.3.10.axis
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.3.10.gamma
+W1011 03:26:43.542980 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.3.10.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.3.10.beta
+W1011 03:26:43.543016 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.3.10.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.3.10.moving_mean
+W1011 03:26:43.543064 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.3.10.moving_mean
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.3.10.moving_variance
+W1011 03:26:43.543106 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.3.10.moving_variance
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.4.1.axis
+W1011 03:26:43.543143 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.4.1.axis
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.4.1.gamma
+W1011 03:26:43.543178 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.4.1.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.4.1.beta
+W1011 03:26:43.543214 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.4.1.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.4.1.moving_mean
+W1011 03:26:43.543250 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.4.1.moving_mean
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.4.1.moving_variance
+W1011 03:26:43.543286 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.4.1.moving_variance
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.4.4.axis
+W1011 03:26:43.543322 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.4.4.axis
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.4.4.gamma
+W1011 03:26:43.543358 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.4.4.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.4.4.beta
+W1011 03:26:43.543394 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.4.4.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.4.4.moving_mean
+W1011 03:26:43.543430 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.4.4.moving_mean
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.4.4.moving_variance
+W1011 03:26:43.543466 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.4.4.moving_variance
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.4.7.axis
+W1011 03:26:43.543502 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.4.7.axis
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.4.7.gamma
+W1011 03:26:43.543545 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.4.7.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.4.7.beta
+W1011 03:26:43.543582 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.4.7.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.4.7.moving_mean
+W1011 03:26:43.543618 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.4.7.moving_mean
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.4.7.moving_variance
+W1011 03:26:43.543654 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.4.7.moving_variance
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.4.10.axis
+W1011 03:26:43.543690 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.4.10.axis
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.4.10.gamma
+W1011 03:26:43.543725 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.4.10.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.4.10.beta
+W1011 03:26:43.543761 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.4.10.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.4.10.moving_mean
+W1011 03:26:43.543797 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.4.10.moving_mean
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.4.10.moving_variance
+W1011 03:26:43.543846 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.box_encodings.4.10.moving_variance
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.0.1.axis
+W1011 03:26:43.543886 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.0.1.axis
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.0.1.gamma
+W1011 03:26:43.543922 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.0.1.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.0.1.beta
+W1011 03:26:43.543958 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.0.1.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.0.1.moving_mean
+W1011 03:26:43.543994 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.0.1.moving_mean
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.0.1.moving_variance
+W1011 03:26:43.544037 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.0.1.moving_variance
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.0.4.axis
+W1011 03:26:43.544074 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.0.4.axis
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.0.4.gamma
+W1011 03:26:43.544126 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.0.4.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.0.4.beta
+W1011 03:26:43.544179 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.0.4.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.0.4.moving_mean
+W1011 03:26:43.544216 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.0.4.moving_mean
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.0.4.moving_variance
+W1011 03:26:43.544252 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.0.4.moving_variance
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.0.7.axis
+W1011 03:26:43.544288 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.0.7.axis
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.0.7.gamma
+W1011 03:26:43.544324 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.0.7.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.0.7.beta
+W1011 03:26:43.544360 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.0.7.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.0.7.moving_mean
+W1011 03:26:43.544397 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.0.7.moving_mean
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.0.7.moving_variance
+W1011 03:26:43.544433 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.0.7.moving_variance
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.0.10.axis
+W1011 03:26:43.544469 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.0.10.axis
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.0.10.gamma
+W1011 03:26:43.544511 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.0.10.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.0.10.beta
+W1011 03:26:43.544549 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.0.10.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.0.10.moving_mean
+W1011 03:26:43.544584 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.0.10.moving_mean
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.0.10.moving_variance
+W1011 03:26:43.544621 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.0.10.moving_variance
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.1.1.axis
+W1011 03:26:43.544657 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.1.1.axis
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.1.1.gamma
+W1011 03:26:43.544694 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.1.1.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.1.1.beta
+W1011 03:26:43.544730 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.1.1.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.1.1.moving_mean
+W1011 03:26:43.544766 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.1.1.moving_mean
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.1.1.moving_variance
+W1011 03:26:43.544802 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.1.1.moving_variance
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.1.4.axis
+W1011 03:26:43.544854 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.1.4.axis
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.1.4.gamma
+W1011 03:26:43.544892 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.1.4.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.1.4.beta
+W1011 03:26:43.544928 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.1.4.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.1.4.moving_mean
+W1011 03:26:43.544972 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.1.4.moving_mean
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.1.4.moving_variance
+W1011 03:26:43.545010 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.1.4.moving_variance
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.1.7.axis
+W1011 03:26:43.545046 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.1.7.axis
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.1.7.gamma
+W1011 03:26:43.545082 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.1.7.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.1.7.beta
+W1011 03:26:43.545124 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.1.7.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.1.7.moving_mean
+W1011 03:26:43.545161 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.1.7.moving_mean
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.1.7.moving_variance
+W1011 03:26:43.545197 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.1.7.moving_variance
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.1.10.axis
+W1011 03:26:43.545233 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.1.10.axis
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.1.10.gamma
+W1011 03:26:43.545269 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.1.10.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.1.10.beta
+W1011 03:26:43.545306 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.1.10.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.1.10.moving_mean
+W1011 03:26:43.545342 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.1.10.moving_mean
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.1.10.moving_variance
+W1011 03:26:43.545378 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.1.10.moving_variance
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.2.1.axis
+W1011 03:26:43.545422 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.2.1.axis
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.2.1.gamma
+W1011 03:26:43.545459 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.2.1.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.2.1.beta
+W1011 03:26:43.545495 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.2.1.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.2.1.moving_mean
+W1011 03:26:43.545540 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.2.1.moving_mean
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.2.1.moving_variance
+W1011 03:26:43.545575 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.2.1.moving_variance
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.2.4.axis
+W1011 03:26:43.545608 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.2.4.axis
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.2.4.gamma
+W1011 03:26:43.545642 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.2.4.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.2.4.beta
+W1011 03:26:43.545676 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.2.4.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.2.4.moving_mean
+W1011 03:26:43.545710 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.2.4.moving_mean
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.2.4.moving_variance
+W1011 03:26:43.545743 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.2.4.moving_variance
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.2.7.axis
+W1011 03:26:43.545777 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.2.7.axis
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.2.7.gamma
+W1011 03:26:43.545811 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.2.7.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.2.7.beta
+W1011 03:26:43.545859 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.2.7.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.2.7.moving_mean
+W1011 03:26:43.545897 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.2.7.moving_mean
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.2.7.moving_variance
+W1011 03:26:43.545931 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.2.7.moving_variance
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.2.10.axis
+W1011 03:26:43.545966 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.2.10.axis
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.2.10.gamma
+W1011 03:26:43.545999 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.2.10.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.2.10.beta
+W1011 03:26:43.546033 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.2.10.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.2.10.moving_mean
+W1011 03:26:43.546067 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.2.10.moving_mean
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.2.10.moving_variance
+W1011 03:26:43.546107 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.2.10.moving_variance
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.3.1.axis
+W1011 03:26:43.546142 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.3.1.axis
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.3.1.gamma
+W1011 03:26:43.546176 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.3.1.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.3.1.beta
+W1011 03:26:43.546210 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.3.1.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.3.1.moving_mean
+W1011 03:26:43.546244 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.3.1.moving_mean
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.3.1.moving_variance
+W1011 03:26:43.546285 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.3.1.moving_variance
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.3.4.axis
+W1011 03:26:43.546319 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.3.4.axis
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.3.4.gamma
+W1011 03:26:43.546353 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.3.4.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.3.4.beta
+W1011 03:26:43.546387 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.3.4.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.3.4.moving_mean
+W1011 03:26:43.546421 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.3.4.moving_mean
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.3.4.moving_variance
+W1011 03:26:43.546455 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.3.4.moving_variance
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.3.7.axis
+W1011 03:26:43.546488 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.3.7.axis
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.3.7.gamma
+W1011 03:26:43.546522 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.3.7.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.3.7.beta
+W1011 03:26:43.546556 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.3.7.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.3.7.moving_mean
+W1011 03:26:43.546590 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.3.7.moving_mean
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.3.7.moving_variance
+W1011 03:26:43.546623 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.3.7.moving_variance
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.3.10.axis
+W1011 03:26:43.546657 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.3.10.axis
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.3.10.gamma
+W1011 03:26:43.546699 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.3.10.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.3.10.beta
+W1011 03:26:43.546733 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.3.10.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.3.10.moving_mean
+W1011 03:26:43.546767 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.3.10.moving_mean
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.3.10.moving_variance
+W1011 03:26:43.546801 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.3.10.moving_variance
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.4.1.axis
+W1011 03:26:43.546844 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.4.1.axis
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.4.1.gamma
+W1011 03:26:43.546881 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.4.1.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.4.1.beta
+W1011 03:26:43.546915 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.4.1.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.4.1.moving_mean
+W1011 03:26:43.546949 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.4.1.moving_mean
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.4.1.moving_variance
+W1011 03:26:43.546982 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.4.1.moving_variance
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.4.4.axis
+W1011 03:26:43.547016 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.4.4.axis
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.4.4.gamma
+W1011 03:26:43.547049 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.4.4.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.4.4.beta
+W1011 03:26:43.547083 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.4.4.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.4.4.moving_mean
+W1011 03:26:43.547127 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.4.4.moving_mean
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.4.4.moving_variance
+W1011 03:26:43.547161 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.4.4.moving_variance
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.4.7.axis
+W1011 03:26:43.547195 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.4.7.axis
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.4.7.gamma
+W1011 03:26:43.547229 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.4.7.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.4.7.beta
+W1011 03:26:43.547263 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.4.7.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.4.7.moving_mean
+W1011 03:26:43.547297 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.4.7.moving_mean
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.4.7.moving_variance
+W1011 03:26:43.547330 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.4.7.moving_variance
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.4.10.axis
+W1011 03:26:43.547364 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.4.10.axis
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.4.10.gamma
+W1011 03:26:43.547398 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.4.10.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.4.10.beta
+W1011 03:26:43.547432 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.4.10.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.4.10.moving_mean
+W1011 03:26:43.547466 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.4.10.moving_mean
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.4.10.moving_variance
+W1011 03:26:43.547500 137621709088512 util.py:150] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.4.10.moving_variance
+WARNING:tensorflow:A checkpoint was restored (e.g. tf.train.Checkpoint.restore or tf.keras.Model.load_weights) but not all checkpointed values were used. See above for specific issues. Use expect_partial() on the load status object, e.g. tf.train.Checkpoint.restore(...).expect_partial(), to silence these warnings, or use assert_consumed() to make the check explicit. See https://www.tensorflow.org/guide/checkpoint#loading_mechanics for details.
+W1011 03:26:43.547546 137621709088512 util.py:158] A checkpoint was restored (e.g. tf.train.Checkpoint.restore or tf.keras.Model.load_weights) but not all checkpointed values were used. See above for specific issues. Use expect_partial() on the load status object, e.g. tf.train.Checkpoint.restore(...).expect_partial(), to silence these warnings, or use assert_consumed() to make the check explicit. See https://www.tensorflow.org/guide/checkpoint#loading_mechanics for details.
+INFO:tensorflow:Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+I1011 03:26:44.090966 137621709088512 cross_device_ops.py:443] Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+INFO:tensorflow:Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+I1011 03:26:44.092044 137621709088512 cross_device_ops.py:443] Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+INFO:tensorflow:Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+I1011 03:26:44.093559 137621709088512 cross_device_ops.py:443] Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+INFO:tensorflow:Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+I1011 03:26:44.094270 137621709088512 cross_device_ops.py:443] Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+INFO:tensorflow:Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+I1011 03:26:44.095780 137621709088512 cross_device_ops.py:443] Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+INFO:tensorflow:Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+I1011 03:26:44.096524 137621709088512 cross_device_ops.py:443] Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+INFO:tensorflow:Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+I1011 03:26:44.098230 137621709088512 cross_device_ops.py:443] Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+INFO:tensorflow:Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+I1011 03:26:44.099016 137621709088512 cross_device_ops.py:443] Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+INFO:tensorflow:Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+I1011 03:26:44.100312 137621709088512 cross_device_ops.py:443] Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+INFO:tensorflow:Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+I1011 03:26:44.101138 137621709088512 cross_device_ops.py:443] Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+WARNING:tensorflow:From /data/virtual_envs/sdc-c1-gpu-augment/lib/python3.7/site-packages/tensorflow/python/util/deprecation.py:574: calling map_fn_v2 (from tensorflow.python.ops.map_fn) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Use fn_output_signature instead
+W1011 03:26:50.049241 137582490773248 deprecation.py:506] From /data/virtual_envs/sdc-c1-gpu-augment/lib/python3.7/site-packages/tensorflow/python/util/deprecation.py:574: calling map_fn_v2 (from tensorflow.python.ops.map_fn) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Use fn_output_signature instead
+INFO:tensorflow:Step 100 per-step time 0.378s loss=3.578
+I1011 03:29:10.847793 137621709088512 model_lib_v2.py:682] Step 100 per-step time 0.378s loss=3.578
+INFO:tensorflow:Step 200 per-step time 0.348s loss=5.115
+I1011 03:29:47.428750 137621709088512 model_lib_v2.py:682] Step 200 per-step time 0.348s loss=5.115
+INFO:tensorflow:Step 300 per-step time 0.364s loss=4.833
+I1011 03:30:23.077021 137621709088512 model_lib_v2.py:682] Step 300 per-step time 0.364s loss=4.833
+INFO:tensorflow:Step 400 per-step time 0.352s loss=5.003
+I1011 03:30:59.094788 137621709088512 model_lib_v2.py:682] Step 400 per-step time 0.352s loss=5.003
+INFO:tensorflow:Step 500 per-step time 0.390s loss=5.244
+I1011 03:31:35.719460 137621709088512 model_lib_v2.py:682] Step 500 per-step time 0.390s loss=5.244
+INFO:tensorflow:Step 600 per-step time 0.360s loss=5.491
+I1011 03:32:13.045602 137621709088512 model_lib_v2.py:682] Step 600 per-step time 0.360s loss=5.491
+INFO:tensorflow:Step 700 per-step time 0.359s loss=5.116
+I1011 03:32:49.029966 137621709088512 model_lib_v2.py:682] Step 700 per-step time 0.359s loss=5.116
+INFO:tensorflow:Step 800 per-step time 0.363s loss=6.238
+I1011 03:33:24.853457 137621709088512 model_lib_v2.py:682] Step 800 per-step time 0.363s loss=6.238
+INFO:tensorflow:Step 900 per-step time 0.369s loss=6.356
+I1011 03:34:00.791560 137621709088512 model_lib_v2.py:682] Step 900 per-step time 0.369s loss=6.356
+INFO:tensorflow:Step 1000 per-step time 0.350s loss=6.426
+I1011 03:34:37.195728 137621709088512 model_lib_v2.py:682] Step 1000 per-step time 0.350s loss=6.426

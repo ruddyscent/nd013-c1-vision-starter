@@ -1,0 +1,26 @@
+{
+  "sha256": {
+    "README.md": "6631fa6f9f75a930cfc14ea3ba9e6d79a76175cebf47850adad842ae97693be3",
+    "utils.py": "ad04113c9a97e651bc55430be0bfcd4be73429efa38422893f17c78e5ee3a987",
+    "analysis_utils.py": "1997797504686ef49b73b09258c7c8158b30693fb24dbcdc40b56c26a0fcbd3f",
+    "create_splits.py": "558069d9711a8c719c39980c9b9e7057281f4404c2a6259655509ee245d31482",
+    "edit_config.py": "9ed40e08c9b807d3ca4e5afa7540047a28039a526be7864ad9cdb1089c9bc71d",
+    "evaluate_once.py": "1f974525249aa2b4de7397d34b2e4e107deb338b88a6f03da0aa5bfa4e3492aa",
+    "export_metrics.py": "ee9112885943651fc147c212688abd893bf44588ac1e02bba2bf8580ed2ea53a",
+    "inference_video.py": "33320b11f557cbbac5deba700a6b554b4eb9beffe52b8b4fbdc6c0d45a738463",
+    "prepare_head_transfer.py": "b8ad4bb8896506f5a369234d87e3fcaed4ceb6efea2b95b70cbe54d7320ccb05",
+    "run_eda.py": "cc22d810527b0dd8104ba62aac67a677ac80cfe6a0ccbb44eaded4671aca5d67",
+    "run_augmentations.py": "d84d94a33bd35c1310125403a801d55eb97333854f619e16c17f55a2c744df3e",
+    "run_experiments.sh": "922fa4dc80ca35a884ca22bc8de3aaaa8de84b3d207730f9071b8b457e6925de",
+    "select_model.py": "3337a6a58b3ead6797cb1825b26914fee8d5ec45f79b78e5021e2bc34ca5b56a",
+    "split_event_files.py": "00ff2b0447971b0921bd673cd258ae3d256e46e9146cde11c67296420f90b87b",
+    "tests/test_config.py": "1723ec3a42629a6b67576d91091fed1116f8c83130735eb1846e20e998c888c4",
+    "tests/test_event_splits.py": "8ed7a710700dcbcab19e7174756440a569d70d86a9d6a2bff3c8ea8b3b04d993",
+    "tests/test_head_transfer.py": "830c70ed9b65bfb6509f2311768d2470a3d0fb55a40321898ccc8365d3c22cbf",
+    "tests/test_splits.py": "219c85ad7e5bff319d19a4dbbf1fc91033205e0d948e34805d28d5aeadf39ade",
+    "tests/test_visualization.py": "07d1decbf49095311bc2d0b46cacd455fe6cf6d0afaba87f186c84632c6b0634"
+  },
+  "workspace_tests": "12 passed after final code update",
+  "training_repeated_after_format_only_change": false,
+  "scope": "Workspace completion snapshot before the publication-only README update; code hashes remain applicable."
+}

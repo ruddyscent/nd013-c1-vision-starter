@@ -1,0 +1,24 @@
+{
+  "source": "experiments/pretrained_model/ssd_resnet50_v1_fpn_640x640_coco17_tpu-8/checkpoint/ckpt-0",
+  "copied_tensors": 461,
+  "remapped_tensors": [
+    "model/_box_predictor/_prediction_heads/class_predictions_with_background/_class_predictor_layers/0/bias/.ATTRIBUTES/VARIABLE_VALUE",
+    "model/_box_predictor/_prediction_heads/class_predictions_with_background/_class_predictor_layers/0/kernel/.ATTRIBUTES/VARIABLE_VALUE"
+  ],
+  "source_channels": [
+    0,
+    3,
+    1,
+    null,
+    2
+  ],
+  "target_channels": [
+    "background",
+    "vehicle",
+    "pedestrian",
+    "unused",
+    "cyclist"
+  ],
+  "limitation": "Car and bicycle are initialization proxies, not exact Waymo vehicle and cyclist category definitions.",
+  "exact_copy_verification": "passed"
+}

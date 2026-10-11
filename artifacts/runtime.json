@@ -1,0 +1,11 @@
+{
+  "python": "3.7.3 (default, Mar 27 2019, 22:11:17) \n[GCC 7.3.0]",
+  "platform": "Linux-6.6.97+-x86_64-with-debian-stretch-sid",
+  "tensorflow": "2.3.0",
+  "tensorflow_path": "/data/virtual_envs/sdc-c1-gpu-augment/lib/python3.7/site-packages/tensorflow/__init__.py",
+  "numpy": "1.18.5",
+  "matplotlib": "3.4.1",
+  "pillow": "7.2.0",
+  "object_detection_path": "/data/virtual_envs/sdc-c1-gpu-augment/lib/python3.7/site-packages/object_detection/__init__.py",
+  "gpu": "Tesla T4 (13789 MB available to TensorFlow)"
+}

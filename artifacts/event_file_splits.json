@@ -1,0 +1,47 @@
+[
+  {
+    "source": "experiments/reference/train/events.out.tfevents.1791689813.53acf7e4e88eec57c433a8a84849d290551782f1-9bfcb6c-zjfpn.6553.1626.v2",
+    "archive": "artifacts/raw_events/reference/train/events.out.tfevents.1791689813.53acf7e4e88eec57c433a8a84849d290551782f1-9bfcb6c-zjfpn.6553.1626.v2",
+    "sha256": "9a7753c0c271724e4826de666307a889885237e7075d68891927066ea6a832e4",
+    "original_bytes": 135587791,
+    "parts": [
+      "events.out.tfevents.1791689813.53acf7e4e88eec57c433a8a84849d290551782f1-9bfcb6c-zjfpn.6553.1626.v2.part-000",
+      "events.out.tfevents.1791689813.53acf7e4e88eec57c433a8a84849d290551782f1-9bfcb6c-zjfpn.6553.1626.v2.part-001"
+    ],
+    "part_bytes": [
+      94255368,
+      41332423
+    ],
+    "concatenated_bytes_match": true
+  },
+  {
+    "source": "experiments/experiment0/train/events.out.tfevents.1791692708.53acf7e4e88eec57c433a8a84849d290551782f1-64c59df765-6xmxp.570.1680.v2",
+    "archive": "artifacts/raw_events/experiment0/train/events.out.tfevents.1791692708.53acf7e4e88eec57c433a8a84849d290551782f1-64c59df765-6xmxp.570.1680.v2",
+    "sha256": "3a72bd840b698236a9817d2034476905261f1ab784361642d2550f2a2e12aa28",
+    "original_bytes": 140258823,
+    "parts": [
+      "events.out.tfevents.1791692708.53acf7e4e88eec57c433a8a84849d290551782f1-64c59df765-6xmxp.570.1680.v2.part-000",
+      "events.out.tfevents.1791692708.53acf7e4e88eec57c433a8a84849d290551782f1-64c59df765-6xmxp.570.1680.v2.part-001"
+    ],
+    "part_bytes": [
+      94286076,
+      45972747
+    ],
+    "concatenated_bytes_match": true
+  },
+  {
+    "source": "experiments/experiment1/train/events.out.tfevents.1791694538.53acf7e4e88eec57c433a8a84849d290551782f1-64c59df765-6xmxp.15656.1680.v2",
+    "archive": "artifacts/raw_events/experiment1/train/events.out.tfevents.1791694538.53acf7e4e88eec57c433a8a84849d290551782f1-64c59df765-6xmxp.15656.1680.v2",
+    "sha256": "22cece20ca0862b1f37585d0f927274d8be32f09aa7e85dcca8f088171a5233e",
+    "original_bytes": 136017644,
+    "parts": [
+      "events.out.tfevents.1791694538.53acf7e4e88eec57c433a8a84849d290551782f1-64c59df765-6xmxp.15656.1680.v2.part-000",
+      "events.out.tfevents.1791694538.53acf7e4e88eec57c433a8a84849d290551782f1-64c59df765-6xmxp.15656.1680.v2.part-001"
+    ],
+    "part_bytes": [
+      94358903,
+      41658741
+    ],
+    "concatenated_bytes_match": true
+  }
+]

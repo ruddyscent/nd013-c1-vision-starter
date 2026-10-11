@@ -1,0 +1,17 @@
+{
+  "reference/train": {
+    "scalar_rows": 17500,
+    "before_after_equal": true,
+    "byte_preservation": "SHA-256 verified by splitter"
+  },
+  "experiment0/train": {
+    "scalar_rows": 17500,
+    "before_after_equal": true,
+    "byte_preservation": "SHA-256 verified by splitter"
+  },
+  "experiment1/train": {
+    "scalar_rows": 17500,
+    "decoder_read_after_split": "passed",
+    "byte_preservation": "SHA-256 verified by splitter"
+  }
+}
